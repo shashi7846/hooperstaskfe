@@ -1,0 +1,15 @@
+.Header{
+    align-items: center;
+    background-color: gray;
+    border-bottom: 3px solid black;
+}
+.Header_top{
+    width: max-content;
+}
+.img{
+    height:100px;
+    padding-left: 35rem;
+    padding-top: 20px;
+    
+
+}

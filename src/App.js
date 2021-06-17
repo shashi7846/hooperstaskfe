@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Header from "./Header";
+import Login from "./Login";
+import Bottom from "./Bottom";
+import CollegeList from "./CollegeList";
+import Share from "./Share";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <div className="header_top">
+          <Header />
+        </div>
+
+        <Switch>
+          {/* <div className="Main_content">
+        <Collegeoptions/>
+      </div> */}
+          <Route path="/" component={Login} exact>
+            {/* <Login /> */}
+          </Route>
+
+          <Route path="/collegelist/:id" component={CollegeList} exact>
+            {/* <CollegeList /> */}
+          </Route>
+        </Switch>
+        <div className="Social_media">
+          <Share />
+        </div>
+
+        <div className="Header_bottom">
+          <Bottom />
+        </div>
+       
+      </div>
+    </Router>
   );
 }
 
