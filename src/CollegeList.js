@@ -2,10 +2,9 @@ import React, {useState,useEffect} from "react";
 import { useHistory } from "react-router-dom";
 import { GetColleges, PostCollege } from "./axios";
 import './CollegeList.css';
-// import { GetCollege } from "./axios";
-// import UseContext from "./usercontext";
+
 function CollegeList(props) {
-  // let users=useContext(UserContext)
+  
 
   let history = useHistory();
 
@@ -15,13 +14,7 @@ function CollegeList(props) {
   let [city, setCity] = useState("");
   let [tabledata,setTabledata]=useState([]);
 
-//   const [print, setPrint] = useState(false);
 
-  // function getData(e){
-  //     setData(e.target.value);
-  //     setPrint(false)
-  //             console.log(e.target.value);
-  // }
 
   let userData = {
     collegename: collegename,
@@ -165,7 +158,7 @@ function CollegeList(props) {
     </div>
     <div className="logout">
       <button className="btn btn-danger" type="submit"  onClick={()=>{
-                             window.localStorage.removeItem("app_token");
+                             
                             //  setisAuth(false)
                              history.push(`/`);
                         }}>Logout
