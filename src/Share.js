@@ -1,3 +1,10 @@
+
+//In this file SHare Buttons will work if there is a data in the database that means in DB there must b one complete table data
+// THEN only it will share the data otherwise at login phase itself while pointing cursor or to enter name it will throw an error
+//so please mention one data in DB & only the first table data is shared through social media sites because we mentioned 
+//setTabledata(data.data[0]) below
+//If you wanna execute or to get the data with the empty list then comment this SHare.js file then it will work 
+
 import {
     EmailIcon,
     FacebookIcon,
@@ -49,21 +56,21 @@ import {GetColleges} from "./axios";
 
   <EmailShareButton url={`collegename:${tabledata.collegename}\n collegecode:${tabledata.collegecode}\n collegecountrystate${tabledata.collegecountrystate}\n collegecity${tabledata.collegecity}`}>
       <EmailIcon size={32} round={true} url="" logoFillColor="white"/>
-  </EmailShareButton>
+  </EmailShareButton>  
 {/* 
                <FacebookShareButton url={`collegename:${tabledata.collegename}\n collegecode:${tabledata.collegecode}\n collegecountrystate${tabledata.collegecountrystate}\n collegecity${tabledata.collegecity}`}>
 
       <FacebookIcon size={32} round={true} url="" logoFillColor="white"/>
   </FacebookShareButton> */}
-  <TelegramShareButton url={`collegename:${tabledata.collegename}\n collegecode:${tabledata.collegecode}\n collegecountrystate${tabledata.collegecountrystate}\n collegecity${tabledata.collegecity}`}>
+  {/* <TelegramShareButton url={`collegename:${tabledata.collegename}\n collegecode:${tabledata.collegecode}\n collegecountrystate${tabledata.collegecountrystate}\n collegecity${tabledata.collegecity}`}>
       <TelegramIcon size={32} round={true} url="www.telegram.com" logoFillColor="white"/>
-  </TelegramShareButton>
+  </TelegramShareButton> */}
   
-  <TwitterShareButton url={`collegename:${tabledata.collegename}\n collegecode:${tabledata.collegecode}\n collegecountrystate${tabledata.collegecountrystate}\n collegecity${tabledata.collegecity}`}>
+    <TwitterShareButton url={`collegename:${tabledata.collegename}\n collegecode:${tabledata.collegecode}\n collegecountrystate${tabledata.collegecountrystate}\n collegecity${tabledata.collegecity}`}>
       <TwitterIcon size={32} round={true} url="" logoFillColor="white"/>
-  </TwitterShareButton>
+  </TwitterShareButton> 
 
-  <LinkedinShareButton url={`collegename:${tabledata.collegename}\n collegecode:${tabledata.collegecode}\n collegecountrystate${tabledata.collegecountrystate}\n collegecity${tabledata.collegecity}`}>
+  {/* <LinkedinShareButton url={`collegename:${tabledata.collegename}\n collegecode:${tabledata.collegecode}\n collegecountrystate${tabledata.collegecountrystate}\n collegecity${tabledata.collegecity}`}>
       <LinkedinIcon size={32} round={true} url="" logoFillColor="white"/>
   </LinkedinShareButton>
 
@@ -72,7 +79,7 @@ import {GetColleges} from "./axios";
   <PinterestShareButton url={`collegename:${tabledata.collegename}\n collegecode:${tabledata.collegecode}\n collegecountrystate${tabledata.collegecountrystate}\n collegecity${tabledata.collegecity}`}>
       <PinterestIcon size={32} round={true} url="" logoFillColor="white"/>
   </PinterestShareButton>
-          
+           */}
           </div>
       )
   }

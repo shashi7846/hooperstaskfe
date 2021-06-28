@@ -7,15 +7,7 @@ import {Link,useHistory} from "react-router-dom";
 function Login() {
     const[studentName,setName]=useState("")
    
-    // const[data,setData]=useState(null);
-    // const[print,setPrint]=useState(false);
     
-
-    // function getData(e){
-    //     setData(e.target.value);
-    //     setPrint(false)
-    //             console.log(e.target.value);
-    // }
 
     let studentData = {
     studentName:studentName

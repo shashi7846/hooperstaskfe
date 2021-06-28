@@ -3,6 +3,7 @@ import Header from "./Header";
 import Login from "./Login";
 import Bottom from "./Bottom";
 import CollegeList from "./CollegeList";
+
 import Share from "./Share";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
@@ -24,6 +25,9 @@ function App() {
           <Route path="/collegelist/:id" component={CollegeList} exact>
             {/* <CollegeList /> */}
           </Route>
+          {/* <Route path="/collegelists" component={Collegelists} exact>
+
+          </Route> */}
         </Switch>
         <div className="Social_media">
           <Share />
