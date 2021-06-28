@@ -26,7 +26,10 @@ import {GetColleges} from "./axios";
       const shareUrl="https://www.instagram.com/";
 
 
+
       let [tabledata,setTabledata]=useState([]);
+
+     
 
       useEffect(async () => {
         let data=await GetColleges()

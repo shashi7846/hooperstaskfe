@@ -1,9 +1,13 @@
 import React, {useState,useEffect} from "react";
+import { useHistory } from "react-router-dom";
 import { GetColleges, PostCollege } from "./axios";
+import './CollegeList.css';
 // import { GetCollege } from "./axios";
 // import UseContext from "./usercontext";
 function CollegeList(props) {
   // let users=useContext(UserContext)
+
+  let history = useHistory();
 
   let [collegename, setCollegeName] = useState("");
   let [countrystate, setCountryState] = useState("");
@@ -159,6 +163,14 @@ function CollegeList(props) {
         </div>
       </div>
     </div>
+    <div className="logout">
+      <button className="btn btn-danger" type="submit"  onClick={()=>{
+                             window.localStorage.removeItem("app_token");
+                            //  setisAuth(false)
+                             history.push(`/`);
+                        }}>Logout
+          </button>
+</div>
     </form>
    
     </>
